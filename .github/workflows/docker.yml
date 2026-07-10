@@ -3,7 +3,8 @@ name: Build and Publish Docker Image
 on:
   push:
     branches:
-      - test
+      - master
+      - test-build
   workflow_dispatch:
 
 env:
@@ -33,7 +34,6 @@ jobs:
           context: .
           push: true
           tags: |
-            ${{ env.IMAGE_NAME }}:test
             ${{ env.IMAGE_NAME }}:latest
           cache-from: type=gha
           cache-to: type=gha,mode=max
