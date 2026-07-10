@@ -25,4 +25,6 @@ RUN apt-get update && \
     /usr/share/doc/* \
     /usr/share/man/*
 
+RUN chmod -R go=u /opt/v2rayN
+
 CMD ["/bin/v2rayn"]
