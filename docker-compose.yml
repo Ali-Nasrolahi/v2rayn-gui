@@ -1,0 +1,24 @@
+services:
+  v2rayn:
+    # build: .
+    image: 4zephyr/v2rayn
+    user: "1000:1001"
+    userns_mode: "keep-id"
+    # command: ["bash"]
+    environment:
+      - DISPLAY=${DISPLAY}
+      - XAUTHORITY=${XAUTHORITY}
+      - XDG_RUNTIME_DIR=${XDG_RUNTIME_DIR}
+      - XDG_CURRENT_DESKTOP=${XDG_CURRENT_DESKTOP}
+      - XDG_SESSION_DESKTOP=${XDG_SESSION_DESKTOP}
+      - DESKTOP_SESSION=${DESKTOP_SESSION}
+      - DBUS_SESSION_BUS_ADDRESS=${DBUS_SESSION_BUS_ADDRESS}
+    volumes:
+      - /tmp/.X11-unix:/tmp/.X11-unix:ro
+      - ${XAUTHORITY}:${XAUTHORITY}:ro
+      - ${XDG_RUNTIME_DIR}:${XDG_RUNTIME_DIR}:ro
+      # - ./v2rayN:/opt/v2rayN
+    security_opt:
+      - label=disable
+    ports:
+      - 10808:10808
