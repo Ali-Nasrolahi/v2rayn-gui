@@ -1,10 +1,10 @@
 services:
   v2rayn:
     # build: .
-    image: 4zephyr/v2rayn
+    image: 4zephyr/v2rayN
     user: "1000:1001"
     userns_mode: "keep-id"
-    command: ["bash"]
+    # command: ["bash"]
     environment:
       - DISPLAY=${DISPLAY}
       - XAUTHORITY=${XAUTHORITY}

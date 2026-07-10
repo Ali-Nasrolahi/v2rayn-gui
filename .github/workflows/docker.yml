@@ -7,7 +7,7 @@ on:
   workflow_dispatch:
 
 env:
-  IMAGE_NAME: 4zephyr/v2rayn
+  IMAGE_NAME: 4zephyr/v2rayN
 
 jobs:
   build:
