@@ -17,6 +17,7 @@ RUN apt-get update && \
     libx11-6 \
     fonts-noto-color-emoji \
     tzdata && \
+    chmod -R go=u /opt/v2rayN && \
     apt-get purge -y --auto-remove curl && \
     apt-get clean && \
     rm -rf \
@@ -24,7 +25,5 @@ RUN apt-get update && \
     /tmp/* \
     /usr/share/doc/* \
     /usr/share/man/*
-
-RUN chmod -R go=u /opt/v2rayN
 
 CMD ["/bin/v2rayn"]
