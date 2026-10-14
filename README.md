@@ -39,7 +39,11 @@ An example Compose configuration is included in this repository. It demonstrates
 
 ## Usage
 
-Build the image yourself or pull it from Docker Hub.
+Build the image yourself or pull it from GitHub Container Registry:
+
+```sh
+docker pull ghcr.io/ali-nasrolahi/v2rayn-gui:latest
+```
 
 Then use the provided Compose file as a starting point.
 
